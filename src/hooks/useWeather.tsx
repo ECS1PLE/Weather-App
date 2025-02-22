@@ -41,13 +41,13 @@ export const useWeather = (city: string) => {
         }
         const data = await response.text();
 
-        console.log("Weather API Response:", data);
+        console.log(data);
 
         const parts = data.split(" ");
         const description = parts.slice(0, -1).join(" ").trim().toLowerCase();
         const temperature = parts[parts.length - 1]?.trim() || "N/A";
 
-        console.log("Processed description:", description);
+        console.log(description);
 
         const matchedCondition = weatherConditions.find((w) =>
           description.includes(w.description)

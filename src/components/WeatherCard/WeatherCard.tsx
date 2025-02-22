@@ -13,7 +13,7 @@ const WeatherCard: React.FC<WeatherProps> = ({ weather }) => {
   return (
     <div className="weather-card">
       <h2 className="weather-city">{weather.city}</h2>
-      <p className="weather-temp">{weather.temperature}°C</p>
+      <p className="weather-temp">{weather.temperature}</p>
       <p className="weather-desc">{weather.description}</p>
     </div>
   );
